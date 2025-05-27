@@ -3,8 +3,7 @@
 #Programmer - Mitch Haung
 #Date - 5.27.2025
 #Description:
-#1. Generate GEE Models for outcome of Grade Group ≥2 detection (1 model for TP and 1 for TR) - adjust for treatment site and within-patient clustering
-#2. Generate GEE Models for outcome of Grade Group 1 detection (1 model for TP and 1 model for TR) - adjust for treatment site and within-patient clustering
+#Generate GEE Models for outcomes of Grade Group ≥2 detection and for the outcomes of Grade Group 1 detection - adjust for treatment site and within-patient clustering (Separate models for TP and TR approaches)
 #Clear Workspace
 rm(list=ls())
 
@@ -25,7 +24,8 @@ grouped.data$cs.detected<-as.numeric(grouped.data$cs.detected)
 grouped.data$gg1.detected<-as.numeric(grouped.data$gg1.detected)
 grouped.data$id<-factor(grouped.data$id)
 
-#1. Generating 4 separate GEE models - 2 for Grade Group ≥2 detection (1 for TP and 1 for TR) and 2 for Grade Group 1 detection (1 for TP and 1 for TR)
+#Generating 4 separate GEE models - 2 for the outcomes of Grade Group ≥2 detection (1 for TP and 1 for TR) and 2 for the outcomes Grade Group 1 detection (1 for TP and 1 for TR)
+#Patients are clustered by their study ID, treatment groups is biopsy_group (Systematic plus Targeted vs Targeted alone), treatment site is adjusted for (redcape_data_access_group.factor)
 
 levels_biopsy_type<-c("Transrectal","Transperineal")
 outcomes<-c("gg1.detected","cs.detected")
@@ -56,7 +56,7 @@ for (current_outcome in outcomes){
       emm_gee <- emmeans(mygee, ~ biopsy_group, type = "response")
       emm_df <- as.data.frame(emm_gee)
 
-      # 3. Manual Calculation of Probability Difference
+      # 3. Manual Calculation of Probability Difference in Estimated Marginal Means
       prob_diff <- emm_df$prob[1] - emm_df$prob[2]
       se_diff <- sqrt(emm_df$SE[1]^2 + emm_df$SE[2]^2)
       z_value <- prob_diff / se_diff
