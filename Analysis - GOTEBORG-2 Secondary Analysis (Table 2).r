@@ -1,6 +1,6 @@
 #PROGRAM - Analysis of GG1 and GG≥2 cancer detection in the subset of GÖTEBORG-2 patients who had MRI visible lesions AND who underwent biopsy
 #Data was derived from Table 3 of 2022 GÖTEBORG-2 Publication https://www.nejm.org/doi/full/10.1056/NEJMoa2209454
-#Programmer - Mitch Haung
+#Programmer - Mitch Huang
 #Date - 5.27.2025
 #Description:
 #1. Generates a table comparing GG≥2 or higher and GG1 cancer detection among the 261 patients who underwent MRI-targeted biopsy only and the 136 patients who underwent combined MRI-Targeted plus Systematic biopsy
