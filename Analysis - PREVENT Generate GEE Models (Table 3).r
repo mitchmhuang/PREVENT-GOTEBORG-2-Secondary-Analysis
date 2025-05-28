@@ -1,6 +1,6 @@
 #PROGRAM - Analysis of PREVENT cancer detection by MRI-targeted alone vs MRI-targeted plus systematic biopsy in 
 #Processed Data - PREVENT Reoganized Data.R - in which patients have been re-organized/duplicated so that each patient has an entry for Combined (systematic plus MRI-targeted) and Targeted (MRI-targeted alone) biopsies
-#Programmer - Mitch Haung
+#Programmer - Mitch Huang
 #Date - 5.27.2025
 #Description:
 #Generate GEE Models for outcomes of Grade Group ≥2 detection and for the outcomes of Grade Group 1 detection - adjust for treatment site and within-patient clustering (Separate models for TP and TR approaches)
