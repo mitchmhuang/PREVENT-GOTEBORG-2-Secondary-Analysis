@@ -1,6 +1,6 @@
 #PROGRAM - Presentation of baseline characteristics for overall cohort of patients in (and any additional analyses needed) 
 #Master Data - PREVENT Secondary Analysis Cohort.R - in which patients are organized as in original PREVENT (by individual patient, grouped by TP vs TR)
-#Programmer - Mitch Haung
+#Programmer - Mitch Huang
 #Date - 5.27.2025
 #Description:
 #1. Generate Table 1 in manuscript showing baseline characteristics for TP vs TR cohorts (since this is a subset of the published PREVENT cohort)
