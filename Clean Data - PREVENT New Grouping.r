@@ -1,4 +1,4 @@
-#This creates a new organization to the data, grouping by MRI-Targeted (Targeted) vs MRI-Targeted Plus Systematic Groups (Combined). So patient-level data is doubled
+#This creates a new organization to the data, grouping by MRI-Targeted (Targeted) vs MRI-Targeted Plus Systematic Groups (Combined). So each patient now has 2 rows of data in the dataset named grouped.data
 
 #Clear Workspace
 rm(list=ls())
